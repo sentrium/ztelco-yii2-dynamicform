@@ -397,7 +397,7 @@
         var $hasTouchSpin = $(widgetOptionsRoot.widgetItem).find('[data-krajee-TouchSpin]');
         if ($hasTouchSpin.length > 0) {
             $hasTouchSpin.each(function() {
-                $(this).TouchSpin('destroy');
+                $(this).TouchSpin().trigger('touchspin.destroy');
                 $(this).TouchSpin(eval($(this).attr('data-krajee-TouchSpin')));
             });
         }
